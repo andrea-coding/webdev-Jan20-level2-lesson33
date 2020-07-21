@@ -1,0 +1,57 @@
+!!! 5
+%body
+    %header
+        %h1
+    %section
+
+        %p lorem 
+
+        %img{:src => "im1.jpg", :alt => "foot" ,:width => "100px", :height => "100px"}
+        %img{:src => "im2.jpg", :alt => "foot",:width => "100px", :height => "100px"}
+        %img(src="im3.jpg" alt ="foot" width ="100px" height ="100px")
+        %section.feature
+        %section.feature.special
+        %section#hello
+        %section#hello.feature(role="region")
+        .awesome
+        .awesome.lesson
+        #getting-started.lesson
+        %input{:type => "checkbox", :checked => true}
+        %input(type="checkbox" checked=true)
+        %input(type="checkbox" checked)
+
+        .author
+            =  @author
+            \= @author
+        %p
+            shay ispsum
+            = succeed "." do
+                %a{:href=>"#"} awesome
+        %div
+            / commented line
+            Actual line
+
+        /
+            %div
+                commented block
+
+    /[if lt IE 9]
+        %script{:src => "html5shiv.js"}
+
+    %div
+        -# Removed line
+        Actual line
+    
+    :javascript
+        $('button').on('click', function(event){
+            $('p').hide('slow');
+        });
+
+    :css
+        .container {
+            margin: 0 auto;
+            width: 960px;
+        }
+
+
+    
